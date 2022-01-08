@@ -1,0 +1,22 @@
+body {
+    font-family: "Nunito Sans", sans-serif, MBCorpo Text, DaimlerCS-Regular, Helvetica, Arial, sans-serif;
+}
+
+html {
+    font-size: 10px; // 1rem = 10px
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    max-width: 1920px;
+    margin: 0px auto;
+}
+
+.control {
+    width: 92%;
+    margin: auto;
+}
+
+.section {
+    padding: 50px 0;
+}

@@ -1,0 +1,97 @@
+.list__icon-right {
+    position: fixed;
+    right: 0;
+    bottom: 350px;
+    cursor: pointer;
+    z-index: 99;
+    @include Responsive(SM) {
+        background-color: black;
+        bottom: 0;
+        display: flex;
+        width: 100%;
+    }
+    .icon-item {
+        right: 0;
+        width: 200px;
+        height: 40px;
+        background-color: $primary-dark;
+        color: white;
+        margin-bottom: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(163px);
+        transition: all 0.8s ease;
+        .icon-text {
+            display: none;
+            @include Responsive(SM) {
+                display: block;
+                // margin-top: 10px;
+            }
+        }
+        .icon-text-mb {
+            @include Responsive(SM) {
+                margin-bottom: 10px;
+            }
+        }
+        .icon-list {
+            @include Responsive(SM) {
+                display: none;
+            }
+        }
+        @include Responsive(SM) {
+            margin: 0 auto;
+            width: 33%;
+            margin-right: 2px;
+            margin-top: 2px;
+            height: 60px;
+            flex-direction: column;
+            transform: translateX(0px);
+            display: flex;
+            text-align: center;
+            padding-top: 7px;
+        }
+        i {
+            padding-left: 0.5rem;
+            font-size: 2.2rem;
+            color: white;
+            // @include Responsive(SM) {
+            //   font-size: 16px;
+            // }
+        }
+        span {
+            width: 160px;
+            // text-align: center;
+            opacity: 1;
+            color: $primary-main;
+            font-size: 1.2rem;
+            overflow: hidden;
+            margin-left: 4px;
+            ul {
+                li {
+                    display: inline-block;
+                    margin-right: 1rem;
+                    i {
+                        transition: all 0.5s;
+                        font-size: 2rem !important;
+                        &:hover {
+                            color: $primary-header_left;
+                        }
+                    }
+                }
+            }
+            @include Responsive(SM) {
+                display: block;
+                padding-top: 5px;
+            }
+        }
+        &:hover {
+            transform: translateX(10px);
+        }
+        @include Responsive(SM) {
+            &:hover {
+                transform: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,170 @@
+.header {
+    background-color: $primary-black;
+    width: 100;
+    height: 100%;
+    .header__container {
+        color: $primary-main;
+        padding-bottom: 20px;
+        @include Responsive(LG) {
+            width: 98%;
+        }
+        @include Responsive(MD) {
+            padding-bottom: 10px;
+        }
+        .header__brand {
+            // padding-top: 10px;
+            text-align: right;
+            color: $primary-black;
+            .header__brand-left {
+                padding-top: 5px;
+                position: relative;
+                .provider {
+                    padding-right: 25px;
+                }
+                @include Responsive(SM) {
+                    padding-top: 15px;
+                    .provider {
+                        display: none;
+                    }
+                    .deutsh {
+                        padding-top: 30px;
+                    }
+                }
+                .fa-info {
+                    text-align: center;
+                    color: $primary-main;
+                    padding: 4px 6px;
+                    border: 1px solid $primary-main;
+                    margin-right: 5px;
+                    &:hover {
+                        color: $primary-header_left;
+                        border: 1px solid $primary-header_left;
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    font-size: 1.6rem;
+                    color: $primary-main;
+                    &:hover {
+                        color: $primary-header_left;
+                    }
+                }
+                span {
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+    .header__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .header__content-logo {
+            @include Responsive(XL) {
+                display: flex;
+                align-items: center;
+                a {
+                    .logo {
+                        width: 95%;
+                    }
+                    .mec {
+                        padding-top: 20px;
+                        width: 89%;
+                    }
+                }
+            }
+            @include Responsive(SM) {
+                .logo {
+                    width: 40%;
+                }
+                .mec {
+                    padding-top: 20px;
+                    width: 40%;
+                }
+            }
+            .mec {
+                margin-bottom: 5px;
+            }
+            img {
+                padding-right: 20px;
+                @include Responsive(MD) {
+                    padding-right: 15px;
+                }
+            }
+        }
+        .header__nav {
+            padding-top: 45px;
+            transition: all 0.8s ease;
+            @include Responsive(LG) {
+                display: none;
+            }
+            .header__nav-list {
+                @include Responsive(LG) {
+                    position: absolute;
+                    top: 95px;
+                    left: 0;
+                    display: flex;
+                    flex-direction: column;
+                    z-index: 1000;
+                    width: 100%;
+                    text-align: center;
+                    background-color: $primary-black;
+                }
+                @include Responsive(SM) {
+                    top: 95px;
+                }
+            }
+            .header__nav-item {
+                display: inline;
+                &:hover {
+                    color: $primary-header_left;
+                }
+                @include Responsive(LG) {
+                    padding: 24px 0;
+                }
+            }
+            a {
+                color: $primary-main;
+                font-size: 1.6rem;
+                padding: 0 0 0 30px;
+                text-decoration: none;
+                &:hover {
+                    color: $primary-header_left;
+                }
+                @include Responsive(LG) {
+                    font-size: 2rem;
+                }
+            }
+            .fa-search {
+                padding-left: 10px;
+            }
+        }
+        .icon__search {
+            position: absolute;
+            right: 10%;
+            transform: translateX(10%);
+            display: none;
+            @include Responsive(LG) {
+                right: 5%;
+                transform: translateX(5%);
+                display: block;
+            }
+            @include Responsive(SM) {
+                right: 8%;
+                transform: translateX(8%);
+            }
+            .fa-search {
+                color: $primary-main;
+                font-size: 1.6rem;
+            }
+        }
+        .toggle {
+            padding-left: 10px;
+            cursor: pointer;
+            display: none;
+            @include Responsive(LG) {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+
+.intro {
+  background-color: #000;
+  .intro__content {
+    text-align: center;
+    max-width: 520px;
+    color: #fff;
+    h2 {
+      font-size: 2.4rem;
+      line-height: 3.4rem;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.3rem;
+      line-height: 2.3rem;
+      margin-bottom: 10px;
+      a {
+        color: $primary-main-setion;
+        &:hover {
+          color: $primary-them-active;
+        }
+      }
+    }
+    .intro__btn {
+      margin-top: 40px;
+      font-size: 14px;
+      line-height: 2rem;
+      background-color: $primary-main-setion;
+      border: 1px solid $primary-main-setion;
+      border-radius: 1px;
+      padding: 5px 12px 6px 12px;
+      transition: all 0.1s;
+      color: #fff;
+      &:hover {
+        cursor: pointer;
+        background-color: $primary-them-active;
+        border: 1px solid $primary-them-active;
+      }
+      @include Responsive(SM) {
+        display: flex;
+        width: 100%;       
+        span {
+          margin: 0 auto 0 auto;
+        } 
+      }
+    }
+  }
+}

@@ -1,0 +1,153 @@
+.footer {
+    background-color: $primary-black;
+    .container-fluid {
+        h4 {
+            font-size: 2.5rem;
+            color: $primary-main;
+        }
+        hr {
+            background-color: $primary-dark;
+        }
+        p {
+            font-size: 1.5rem;
+            color: $primary-footer;
+        }
+        .row {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            .col-lg-3,
+            .col-lg-6,
+            .col-12,
+            .col-lg-2,
+            .col-lg-9,
+            .col-lg-1,
+            .col-lg-4,
+            .col-lg-12,
+            .col-xl-3 {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+        }
+        .footer__text {
+            ul {
+                li {
+                    a {
+                        text-decoration: none;
+                        transition: all 0, 5s;
+                        &:hover {
+                            color: $primary-header_left !important;
+                        }
+                    }
+                }
+            }
+            .foote__link {
+                font-size: 1.4rem;
+                color: $primary-footer !important;
+            }
+        }
+        .footer__base {
+            .row {
+                .col-lg-6 {
+                    ul {
+                        li {
+                            display: inline-block;
+                            font-size: 2.5rem;
+                            margin: 10px 16.66667px;
+                            width: 45px;
+                            color: #999999;
+                            transition: all 0.5s;
+                            cursor: pointer;
+                            & i:hover {
+                                color: $primary-header_left;
+                            }
+                        }
+                    }
+                }
+                .col-lg-4 {
+                    cursor: pointer;
+                    img {
+                        height: 3rem;
+                        width: 100%;
+                    }
+                }
+                .col-12 {
+                    p {
+                        a {
+                            color: $primary-main;
+                            text-decoration: none;
+                            transition: all 0.5s;
+                            &:hover {
+                                color: $primary-header_left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer__bottom {
+            @include Responsive(SM) {
+                padding-bottom: 30px;
+            }
+            .row {
+                .col-lg-2 {
+                    .active__left {
+                        color: $primary-header_left;
+                        cursor: pointer;
+                        transition: all 0.5s;
+                        font-size: 1.6rem;
+                        &:hover {
+                            color: $primary-them-active;
+                        }
+                    }
+                    .active__right {
+                        font-size: 1.4rem;
+                        color: $primary-main;
+                        cursor: context-menu;
+                    }
+                }
+                .col-lg-9 {
+                    ul {
+                        li {
+                            display: inline-block;
+                            font-size: 1.4rem;
+                            text-align: right;
+                            a {
+                                text-decoration: none;
+                                color: $primary-footer;
+                                transition: all 0.5s;
+                                &:hover {
+                                    color: $primary-header_left;
+                                }
+                            }
+                        }
+                    }
+                }
+                .col-lg-1 {
+                    a {
+                        text-decoration: none;
+                        color: $primary-footer;
+                        font-size: 1.4rem;
+                        &:hover {
+                            color: $primary-header_left;
+                        }
+                    }
+                }
+            }
+            // }
+            @include Responsive(MD) {
+                .row {
+                    .col-md-12 {
+                        text-align: left;
+                        margin-bottom: 2rem;
+                    }
+                    .footer__bootom-first {
+                        text-align: center;
+                    }
+                    .footer__bottom-center {
+                        text-align: left !important;
+                    }
+                }
+            }
+        }
+    }
+}
